@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sơ đồ Website | ValiStore</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true
+        });
+    </script>
+    <style>
+        .mermaid {
+            font-size: 1.2rem;
+            min-height: 600px;
+            zoom: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="22674631.html">ValiStore</a>
+        </div>
+    </nav>
+
+    <!-- Sitemap content -->
+    <div class="container py-5">
+        <h2 class="mb-4 text-center">Sơ đồ cấu trúc Website</h2>
+        <div class="bg-light p-3 border rounded overflow-auto">
+            <pre class="mermaid">
+                graph TD
+                    A[Trang chủ 22674631.html]
+                    A --> B[Sản phẩm product_list.html]
+                    A --> C[Chi tiết sản phẩm product_detail.html]
+                    A --> D[Giới thiệu about_us.html]
+                    A --> E[Liên hệ contact.html]
+                    A --> F[Hướng dẫn chọn vali guide_choose_luggage.html]
+                    A --> G[Đăng ký register.html]
+                    A --> H[Giỏ hàng cart.html]
+                    H --> I[Thanh toán checkout.html]
+                    A --> J[Sitemap sitemap.html]
+            </pre>
+        </div>
+    </div>
+</body>
+
+</html>
