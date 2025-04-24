@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng | ValiStore</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="22674631.html">ValiStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="22674631.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product_list.html">Sản phẩm</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h2 class="text-center mb-4">Giỏ hàng của bạn</h2>
+        <div id="cart-items" class="row"></div>
+        <h4 class="mt-4 text-end">Tổng cộng: <span id="total-price" class="text-danger">0₫</span></h4>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 ValiStore. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script>
+        function formatCurrency(str) {
+            return parseInt(str.replace(/[^\d]/g, ''));
+        }
+
+        function updateCart() {
+            const cartContainer = document.getElementById('cart-items');
+            const totalPriceEl = document.getElementById('total-price');
+            let cart = localStorage.getItem("cart");
+            cart = cart ? JSON.parse(cart) : [];
+            cartContainer.innerHTML = "";
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const price = formatCurrency(item.price);
+                total += price;
+                cartContainer.innerHTML += `
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="${item.image}" class="card-img-top" alt="${item.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${item.name}</h5>
+                            <p class="card-text">Giá: ${item.price}</p>
+                            <button class="btn btn-danger" onclick="removeItem(${index})">Xóa</button>
+                        </div>
+                    </div>
+                </div>`;
+            });
+
+            totalPriceEl.innerText = total.toLocaleString('vi-VN') + '₫';
+        }
+
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem("cart"));
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            updateCart();
+        }
+
+        window.onload = updateCart;
+    </script>
+</body>
+
+</html>

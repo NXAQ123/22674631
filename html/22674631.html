@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValiStore - Cửa hàng vali & túi du lịch</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">ValiStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product_list.html">Sản phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about_us.html">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#lienhe">Liên hệ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="guide_choose_luggage.html">Hướng dẫn chọn vali</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1>Chào mừng đến với ValiStore</h1>
+            <p>Chuyên vali, túi xách, hành lý du lịch chính hãng</p>
+        </div>
+    </header>
+
+    <!-- Sản phẩm -->
+    <section id="sanpham" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Sản phẩm nổi bật</h2>
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/vali1.jpg" class="card-img-top" alt="Vali cao cấp">
+                        <div class="card-body">
+                            <h5 class="card-title">Vali kéo 360°</h5>
+                            <p class="card-text">Chất liệu nhựa ABS chống va đập, màu sắc trẻ trung hiện đại.</p>
+                            <button class="btn btn-primary">Xem chi tiết</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/vali2.jpg" class="card-img-top" alt="Túi xách du lịch">
+                        <div class="card-body">
+                            <h5 class="card-title">Túi du lịch thời trang</h5>
+                            <p class="card-text">Kích thước gọn nhẹ, tiện dụng cho các chuyến đi ngắn ngày.</p>
+                            <button class="btn btn-primary">Xem chi tiết</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/vali3.jpg" class="card-img-top" alt="Balo du lịch đa năng">
+                        <div class="card-body">
+                            <h5 class="card-title">Balo đa năng</h5>
+                            <p class="card-text">Thiết kế thông minh, chống thấm, thích hợp cho du lịch và công tác.</p>
+                            <button class="btn btn-primary">Xem chi tiết</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Giới thiệu -->
+    <section id="gioithieu" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Về chúng tôi</h2>
+            <p class="text-center">ValiStore là địa chỉ tin cậy cung cấp các sản phẩm vali, túi xách, balo chính hãng với chất lượng đảm bảo và giá cả cạnh tranh. Chúng tôi cam kết mang lại trải nghiệm mua sắm tốt nhất cho khách hàng.</p>
+        </div>
+    </section>
+
+    <!-- Liên hệ -->
+    <section id="lienhe" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Liên hệ với chúng tôi</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Họ tên</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Nội dung</label>
+                    <textarea class="form-control" id="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Gửi liên hệ</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 ValiStore. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

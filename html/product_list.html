@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách sản phẩm | ValiStore</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="22674631.html">ValiStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="22674631.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Sản phẩm</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h2 class="text-center mb-4">Tất cả sản phẩm</h2>
+        <div class="row">
+            <!-- Sản phẩm mẫu (lặp lại nhiều lần) -->
+            <!-- Gợi ý dùng for loop hoặc json load từ JS nếu mở rộng sau -->
+            <!-- Mỗi sản phẩm là 1 col-md-3 card nhỏ -->
+            <!-- Dưới đây là ví dụ cho 4 sản phẩm đầu -->
+            <script>
+                const products = [{
+                        name: 'Vali kéo size M',
+                        price: '1.200.000₫',
+                        type: 'Vali',
+                        image: 'images/vali1.jpg'
+                    }, {
+                        name: 'Túi du lịch da bò',
+                        price: '850.000₫',
+                        type: 'Túi du lịch',
+                        image: 'images/vali2.jpg'
+                    }, {
+                        name: 'Balo leo núi',
+                        price: '650.000₫',
+                        type: 'Balo',
+                        image: 'images/vali3.jpg'
+                    }, {
+                        name: 'Vali nhôm chống nước',
+                        price: '2.400.000₫',
+                        type: 'Vali',
+                        image: 'images/vali4.jpg'
+                    }, {
+                        name: 'Túi xách thể thao',
+                        price: '590.000₫',
+                        type: 'Túi du lịch',
+                        image: 'images/vali5.jpg'
+                    }, {
+                        name: 'Balo laptop du lịch',
+                        price: '780.000₫',
+                        type: 'Balo',
+                        image: 'images/vali6.jpg'
+                    }, {
+                        name: 'Vali cabin nhẹ',
+                        price: '970.000₫',
+                        type: 'Vali',
+                        image: 'images/vali7.jpg'
+                    }, {
+                        name: 'Túi kéo tay kéo vai',
+                        price: '1.100.000₫',
+                        type: 'Túi du lịch',
+                        image: 'images/vali8.jpg'
+                    }, {
+                        name: 'Vali nhựa ABS cao cấp',
+                        price: '1.550.000₫',
+                        type: 'Vali',
+                        image: 'images/vali9.jpg'
+                    }, {
+                        name: 'Túi canvas vintage',
+                        price: '480.000₫',
+                        type: 'Túi du lịch',
+                        image: 'images/vali10.jpg'
+                    },
+                    // Thêm đến 20 sản phẩm tương tự
+                ];
+
+                for (let p of products) {
+                    document.write(`
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100">
+                            <a href="product_detail.html"><img src="${p.image}" class="card-img-top" alt="${p.name}"></a>
+                            <div class="card-body">
+                                <h5 class="card-title">${p.name}</h5>
+                                <p class="card-text">Loại: ${p.type}<br>Giá: ${p.price}</p>
+                            </div>
+                        </div>
+                    </div>`);
+                }
+            </script>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 ValiStore. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
