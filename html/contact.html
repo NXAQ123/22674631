@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ với chúng tôi</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Liên hệ với chúng tôi</h2>
+        <div class="row">
+            <!-- Form liên hệ -->
+            <div class="col-md-6">
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Họ tên</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Nội dung</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Gửi</button>
+                </form>
+
+                <div id="result" class="mt-4" style="display: none;"></div>
+            </div>
+
+            <!-- Hình ảnh + số điện thoại -->
+            <div class="col-md-6 text-center">
+                <img src="images/support_staff.jpg" alt="Nhân viên hỗ trợ" class="img-fluid mb-3" style="max-height: 300px;">
+                <h5>Gọi ngay: <strong>555-12345</strong></h5>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#contactForm').submit(function(e) {
+                e.preventDefault();
+
+                const name = $('#name').val().trim();
+                const email = $('#email').val().trim();
+                const message = $('#message').val().trim();
+
+                if (name === '' || email === '' || message === '') {
+                    alert('Vui lòng điền đầy đủ thông tin.');
+                    return;
+                }
+
+                const response = `
+                    <h4>Gửi liên hệ thành công!</h4>
+                    <p><strong>Họ tên:</strong> ${name}</p>
+                    <p><strong>Email:</strong> ${email}</p>
+                    <p><strong>Nội dung:</strong> ${message}</p>
+                    <p>Bạn sẽ được chuyển về trang chủ sau 5 giây...</p>
+                `;
+                $('#result').html(response).fadeIn();
+                $('#contactForm').hide();
+
+                setTimeout(function() {
+                    window.location.href = "22674631.html";
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+
+</html>
