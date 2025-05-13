@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+< lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Khóa học tiếng Anh</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <script src="../js/jquery-3.7.1.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <>
+        <header style="background-image: url('../images/background.png'); background-size: cover; height: 320px;">
+        </header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Free English Course</a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Trang chủ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Giới thiệu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Khóa học</a></li>
+                    </ul>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#registerModal">Đăng ký</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="modal fade" id="registerModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form id="registerForm">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Thông tin đăng ký</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <!-- Họ tên -->
+                                <div class="row mb-3">
+                                    <label class="col-sm-4 col-form-label">Họ tên</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="name">
+                                    </div>
+                                </div>
+
+                                <!-- Ngày sinh -->
+                                <div class="row mb-3">
+                                    <label class="col-sm-4 col-form-label">Ngày sinh</label>
+                                    <div class="col-sm-8">
+                                        <input type="date" class="form-control" name="dob">
+                                    </div>
+                                </div>
+
+                                <!-- Số điện thoại -->
+                                <div class="row mb-3">
+                                    <label class="col-sm-4 col-form-label">Số điện thoại</label>
+                                    <div class="col-sm-8">
+                                        <input type="tel" class="form-control" name="phone">
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="row mb-3">
+                                    <label class="col-sm-4 col-form-label">Email</label>
+                                    <div class="col-sm-8">
+                                        <input type="email" class="form-control" name="email">
+                                    </div>
+                                </div>
+
+                                <!-- Chọn khóa học -->
+                                <div class="row mb-3">
+                                    <label class="col-sm-4 col-form-label">Chọn khóa học</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-select" name="course">
+                                    <option>Anh văn cơ bản</option>
+                                    <option>Giao tiếp nâng cao</option>
+                                    <option>TOEIC</option>
+                                    </select>
+                                    </div>
+                                </div>
+
+                                <!-- Thời gian học -->
+                                <div class="row mb-3">
+                                    <label class="col-sm-4 col-form-label">Thời gian học</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="time">
+                                    </div>
+                                </div>
+
+                                <!-- Hình thức học -->
+                                <div class="row mb-3">
+                                    <label class="col-sm-4 col-form-label">Chọn hình thức học</label>
+                                    <div class="col-sm-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="method" value="Trung tâm">
+                                            <label class="form-check-label">Học tại trung tâm</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="method" value="Online">
+                                            <label class="form-check-label">Học online</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Kỹ năng luyện tập -->
+                                <div class="row mb-3">
+                                    <label class="col-sm-4 col-form-label">Các kỹ năng luyện tập</label>
+                                    <div class="col-sm-8">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="skills" value="Nghe">
+                                            <label class="form-check-label">Kỹ năng nghe</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="skills" value="Đọc">
+                                            <label class="form-check-label">Kỹ năng đọc</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="skills" value="Viết">
+                                            <label class="form-check-label">Kỹ năng viết</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-success">Đăng ký</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Hủy</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <h3>DANH SÁCH ĐĂNG KÝ KHÓA HỌC</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Số thứ tự</th>
+                        <th>Họ tên</th>
+                        <th>Ngày sinh</th>
+                        <th>Điện thoại</th>
+                        <th>Email</th>
+                        <th>Khóa học</th>
+                        <th>Hình thức học</th>
+                        <th>Kỹ năng cần luyện</th>
+                    </tr>
+                </thead>
+                <tbody id="registrationTable">
+                    <!-- Dữ liệu thêm sau khi người dùng đăng ký -->
+                </tbody>
+            </table>
+        </div>
+        <footer class="bg-primary text-white p-3 mt-4">
+            <div class="container">
+                <strong>Thông tin sinh viên:</strong><br> Họ tên: ..............<br> Mã sinh viên: ..............<br> Mã lớp: ..............
+            </div>
+        </footer>
+        <script>
+            $('#registerForm').submit(function(e) {
+                e.preventDefault();
+                const form = $(this).serializeArray();
+                const values = form.map(item => item.value);
+                const row = `<tr><td>${$('#registrationTable tr').length + 1}</td>` +
+                    values.map(val => `<td>${val}</td>`).join('') +
+                    `</tr>`;
+                $('#registrationTable').append(row);
+                $('#registerModal').modal('hide');
+                this.reset();
+            });
+        </script>
+        <script>
+            function validateForm() {
+                const name = $('[name="name"]');
+                const dob = $('[name="dob"]');
+                const phone = $('[name="phone"]');
+                const email = $('[name="email"]');
+                const course = $('[name="course"]');
+                const time = $('[name="time"]');
+                const method = $('[name="method"]:checked');
+                const skills = $('[name="skills"]:checked');
+
+                // a. Họ tên
+                const nameVal = name.val().trim();
+                const nameRegex = /^([A-ZÀ-Ỵ][a-zà-ỹ]*\s)*[A-ZÀ-Ỵ][a-zà-ỹ]*$/;
+                if (!nameVal || !nameRegex.test(nameVal)) {
+                    alert("Họ tên không hợp lệ. Mỗi từ phải viết hoa chữ cái đầu.");
+                    name.focus();
+                    return false;
+                }
+
+                // b. Ngày sinh
+                const today = new Date().toISOString().split("T")[0];
+                if (!dob.val() || dob.val() >= today) {
+                    alert("Ngày sinh phải trước ngày hiện tại.");
+                    dob.focus();
+                    return false;
+                }
+
+                // c. SĐT
+                const phoneRegex = /^(09|03|08)\d{8}$/;
+                if (!phoneRegex.test(phone.val().trim())) {
+                    alert("Số điện thoại không hợp lệ.");
+                    phone.focus();
+                    return false;
+                }
+
+                // d. Email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.com$/;
+                if (!emailRegex.test(email.val().trim())) {
+                    alert("Email không hợp lệ (phải chứa @ và kết thúc bằng .com).");
+                    email.focus();
+                    return false;
+                }
+
+                // e. Cập nhật thời gian học
+                const courseMap = {
+                    "Anh văn cơ bản": "3 tháng",
+                    "Giao tiếp nâng cao": "6 tháng",
+                    "TOEIC": "12 tháng"
+                };
+
+                const courseValue = course.val();
+                if (!courseMap[courseValue]) {
+                    alert("Khóa học không hợp lệ.");
+                    course.focus();
+                    return false;
+                }
+
+                time.val(courseMap[courseValue]);
+
+                // f. Bắt buộc chọn hình thức học
+                if (method.length === 0) {
+                    alert("Bạn phải chọn hình thức học.");
+                    $('[name="method"]').first().focus();
+                    return false;
+                }
+
+                // f. Bắt buộc chọn kỹ năng
+                if (skills.length === 0) {
+                    alert("Bạn phải chọn ít nhất một kỹ năng luyện tập.");
+                    $('[name="skills"]').first().focus();
+                    return false;
+                }
+
+                return true;
+            }
+
+            // Cập nhật thời gian học khi thay đổi khóa học
+            $('[name="course"]').change(function() {
+                const map = {
+                    "Anh văn cơ bản": "3 tháng",
+                    "Giao tiếp nâng cao": "6 tháng",
+                    "TOEIC": "12 tháng"
+                };
+                $('[name="time"]').val(map[$(this).val()] || "");
+            });
+
+            // Xử lý submit
+            $('#registerForm').submit(function(e) {
+                e.preventDefault();
+                if (!validateForm()) return;
+
+                const name = $('[name="name"]').val();
+                const dob = $('[name="dob"]').val();
+                const phone = $('[name="phone"]').val();
+                const email = $('[name="email"]').val();
+                const course = $('[name="course"]').val();
+                const time = $('[name="time"]').val();
+                const method = $('[name="method"]:checked').val();
+                const skills = $('[name="skills"]:checked').map(function() {
+                    return $(this).val();
+                }).get().join(", ");
+
+                const stt = $('#registrationTable tr').length + 1;
+                const row = `<tr>
+      <td>${stt}</td>
+      <td>${name}</td>
+      <td>${dob}</td>
+      <td>${phone}</td>
+      <td>${email}</td>
+      <td>${course}</td>
+      <td>${method}</td>
+      <td>${skills}</td>
+    </tr>`;
+
+                $('#registrationTable').append(row);
+                $('#registerModal').modal('hide');
+                $('#registerForm')[0].reset(); // reset form đúng cách
+            });
+        </script>
+
+        </body>
+
+        </html>
